@@ -11,6 +11,7 @@ import Footer from "./sections/Footer.jsx";
 export default function Home() {
   return (
     <main className="overflow-hidden">
+
       <Header />
       <Hero />
       <Features />
