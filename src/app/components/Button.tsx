@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import { Marker } from "./Marker";
+import  Marker  from "./Marker";
+import Image from "next/image";
 
 interface ButtonProps {
   icon?: string;
@@ -8,6 +9,7 @@ interface ButtonProps {
   containerClassName?: string;
   onClick?: () => void;
   markerFill?: string;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -26,8 +28,10 @@ const Button: React.FC<ButtonProps> = ({
         </span>
 
         {icon && (
-          <img
+          <Image
             src={icon}
+            width={20}
+            height={20}
             alt="circle"
             className="size-10 mr-5 object-contain z-10"
           />

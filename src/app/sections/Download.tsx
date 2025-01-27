@@ -1,6 +1,10 @@
 import { Element } from "react-scroll";
 import { links, logos } from "../constants/index";
 import { Marker } from "../components/Marker";
+import wallet from "../public/images/wallet.svg"
+import line from "../public/images/lines.svg"
+import screen from "../public/images/screen.png"
+import Image from "next/image";
 
 const Download = () => {
   return (
@@ -13,17 +17,16 @@ const Download = () => {
           <div className="flex items-center">
             <div className="relative mr-6 flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
               <div className="mb-10">
-                <img
-                  src="/images/xora.svg"
-                  width={160}
-                  height={55}
-                  alt="xora"
+                <Image
+                  src={wallet}
+                  width={70}
+                  height={84}
+                  alt="Wallet"
                 />
               </div>
 
               <p className="body-1 mb-10 max-w-md">
-                Try it now for free on iOS, Android, PC, Web - whatever your
-                flavor, we've got you covered.
+              DigitWallet provides an all-in-one solution for you to manage, exchange, and grow your assets effortlessly.
               </p>
 
               <ul className="flex flex-wrap items-center gap-6">
@@ -37,10 +40,10 @@ const Download = () => {
                       className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500"
                     >
                       <span className="absolute -top-2 rotate-90">
-                        <Marker fill={undefined} />
+                        <Marker />
                       </span>
-                      <img
-                        src={"/images/lines.svg"}
+                      <Image
+                        src={line}
                         alt="lines"
                         className="absolute size-13/20 object-contain"
                       />
@@ -58,8 +61,8 @@ const Download = () => {
                   <span className="download_preview-dot left-11 bg-s3" />
                   <span className="download_preview-dot left-16 bg-p1/15" />
 
-                  <img
-                    src="/images/screen.jpg"
+                  <Image
+                    src={screen}
                     width={855}
                     height={655}
                     alt="screen"
@@ -75,6 +78,7 @@ const Download = () => {
               <li key={id} className="mx-10">
                 <img src={url} width={width} height={height} alt={title} />
               </li>
+            
             ))}
           </ul>
         </div>

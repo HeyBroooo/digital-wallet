@@ -1,8 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Book, Video, MessageSquare } from "lucide-react";
-
 export default function Login() {
   return (
     <section className="bg-gray-100 dark:bg-gray-900 min-h-screen flex items-center justify-center">

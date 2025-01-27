@@ -1,4 +1,5 @@
-import { Route } from 'react-router-dom';
+"use client";
+import { Route, Routes } from 'react-router-dom';
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Features from "./sections/Features";
@@ -17,6 +18,8 @@ import Custody from './pages/custody/page';
 import BuySellCrypto from './pages/bscrypto/page';
 import Login from './pages/login/page';
 import Signup from './pages/signup/page';
+import { BrowserRouter } from 'react-router-dom';
+
 
 const HomePage = () => {
   return (
@@ -35,7 +38,9 @@ const App = () => {
   return (
     <main className="overflow-hidden">
       <Header />
-      <Route>
+      <BrowserRouter>
+
+      <Routes>
         <Route path="/" Component={HomePage} />
         <Route path="/businesses" Component={BusinessesPage} />
         <Route path="/individuals" Component={IndividualsPage} />
@@ -46,7 +51,9 @@ const App = () => {
         <Route path="/buy-sell" Component={BuySellCrypto} />
         <Route path="/login" Component={Login} />
         <Route path="/signup" Component={Signup} />
-      </Route>
+      </Routes>
+      </BrowserRouter>
+
       <Footer />
     </main>
   );

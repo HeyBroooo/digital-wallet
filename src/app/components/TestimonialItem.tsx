@@ -1,9 +1,10 @@
 import clsx from "clsx";
+import Image, { StaticImageData } from "next/image";
 
 interface TestimonialItemProps {
   item: {
     comment: string;
-    avatarUrl: string;
+    avatarUrl: string| StaticImageData;
     name: string;
     role: string;
   };
@@ -22,7 +23,9 @@ const TestimonialItem = ({ item, containerClassName }: TestimonialItemProps) => 
 
       <div className="flex items-center max-xl:-mr-8">
         <div className="mr-4 size-20 shrink-0 rounded-half border-2 border-s2 p-1.5">
-          <img
+          <Image
+          width={20}
+          height={20}
             src={item.avatarUrl}
             alt={item.name}
             className="size-full object-cover"

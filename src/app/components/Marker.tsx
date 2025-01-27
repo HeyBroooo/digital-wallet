@@ -20,3 +20,6 @@ export const Marker = ({ fill }: MarkerProps) => {
     </svg>
   );
 };
+
+
+export default Marker;
