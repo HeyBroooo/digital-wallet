@@ -1,6 +1,16 @@
 import clsx from "clsx";
 
-const TestimonialItem = ({ item, containerClassName }) => {
+interface TestimonialItemProps {
+  item: {
+    comment: string;
+    avatarUrl: string;
+    name: string;
+    role: string;
+  };
+  containerClassName?: string;
+}
+
+const TestimonialItem = ({ item, containerClassName }: TestimonialItemProps) => {
   return (
     <div
       className={clsx(

@@ -19,7 +19,7 @@ const Header = () => {
     };
   }, []);
 
-  const NavLink = ({ title }) => (
+  const NavLink = ({ title }: { title: string }) => (
     <LinkScroll
       onClick={() => setIsOpen(false)}
       to={title}

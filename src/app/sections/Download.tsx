@@ -1,6 +1,6 @@
 import { Element } from "react-scroll";
-import { links, logos } from "../constants/index.jsx";
-import { Marker } from "../components/Marker.jsx";
+import { links, logos } from "../constants/index";
+import { Marker } from "../components/Marker";
 
 const Download = () => {
   return (
@@ -37,7 +37,7 @@ const Download = () => {
                       className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500"
                     >
                       <span className="absolute -top-2 rotate-90">
-                        <Marker />
+                        <Marker fill={undefined} />
                       </span>
                       <img
                         src={"/images/lines.svg"}

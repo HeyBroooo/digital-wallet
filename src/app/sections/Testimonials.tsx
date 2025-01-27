@@ -1,5 +1,5 @@
-import { testimonials } from "../constants/index.jsx";
-import TestimonialItem from "../components/TestimonialItem.jsx";
+import { testimonials } from "../constants/index";
+import TestimonialItem from "../components/TestimonialItem";
 
 const Testimonials = () => {
   const halfLength = Math.floor(testimonials.length / 2);
